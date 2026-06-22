@@ -21,23 +21,26 @@ const faqs = [
 export default function FaqPage() {
   return (
     <>
-      <section className="bg-ink">
+      <section className="bg-navy">
         <div className="mx-auto max-w-5xl px-4 py-20 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">Common questions</p>
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">Frequently Asked Questions</h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-200">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-sky-light/90">
             Everything you need to know about junk removal and cleanouts in {site.region}, {site.state}.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-16">
-        <div className="space-y-4">
-          {faqs.map((f) => (
-            <details key={f.q} className="rounded-xl border border-slate-200 bg-white p-5">
-              <summary className="cursor-pointer font-semibold text-ink">{f.q}</summary>
-              <p className="mt-3 text-slate-700">{f.a}</p>
-            </details>
-          ))}
+      <section className="bg-sand">
+        <div className="mx-auto max-w-3xl px-4 py-16">
+          <div className="space-y-4">
+            {faqs.map((f) => (
+              <details key={f.q} className="rounded-2xl border border-sky-light bg-white p-5 shadow-card">
+                <summary className="cursor-pointer font-bold text-navy">{f.q}</summary>
+                <p className="mt-3 text-navy/80">{f.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

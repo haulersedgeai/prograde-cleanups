@@ -52,19 +52,22 @@ export default function GrizzlyBagsPage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-ink">
+      <section className="bg-navy">
         <div className="mx-auto max-w-5xl px-4 py-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-accent">Flexible Dumpster Bag</p>
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">Flexible Dumpster Bag</p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
             Grizzly Dumpster Bags in {site.region}, {site.state}
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-200">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-sky-light/90">
             An 8-cubic-yard flexible dumpster bag we drop off, you fill on your own time, and we collect when
             you&apos;re ready. One flat rate — no rental clock, no quote conversation.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <QuoteButton />
-            <a href={site.phoneHref} className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-ink">
+            <a
+              href={site.phoneHref}
+              className="inline-flex items-center justify-center rounded-full border-2 border-sky-light px-6 py-3 font-semibold text-white transition hover:bg-sky-light hover:text-navy"
+            >
               Call {site.phone}
             </a>
           </div>
@@ -72,27 +75,30 @@ export default function GrizzlyBagsPage() {
       </section>
 
       {/* PRICE CARD */}
-      <section className="mx-auto max-w-3xl px-4 py-16">
-        <div className="rounded-3xl border-2 border-brand bg-white p-8 text-center shadow-sm">
-          <h2 className="text-2xl font-bold text-ink">Grizzly Bag — Full Service</h2>
-          <p className="mt-2 text-5xl font-extrabold text-brand">$299</p>
-          <p className="mt-2 text-slate-600">Delivery, the bag, and collection — all included.</p>
-          <ul className="mx-auto mt-6 max-w-md space-y-2 text-left text-slate-700">
-            <li className="flex gap-2"><span className="text-brand">✓</span>8 cubic yards (~10-yard roll-off equivalent)</li>
-            <li className="flex gap-2"><span className="text-brand">✓</span>Delivery within 48 business hours</li>
-            <li className="flex gap-2"><span className="text-brand">✓</span>No rental clock — fill it as long as you need</li>
-            <li className="flex gap-2"><span className="text-brand">✓</span>We collect when you&apos;re ready (weekday pickup)</li>
-          </ul>
-          <div className="mt-8">
-            <QuoteButton />
+      <section className="bg-sand">
+        <div className="mx-auto max-w-3xl px-4 py-16">
+          <div className="rounded-3xl border-2 border-navy bg-white p-8 text-center shadow-lift">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">Anchor price</p>
+            <h2 className="mt-2 text-2xl font-extrabold text-navy">Grizzly Bag — Full Service</h2>
+            <p className="mt-2 text-5xl font-extrabold text-navy">$299</p>
+            <p className="mt-2 text-navy/70">Delivery, the bag, and collection — all included.</p>
+            <ul className="mx-auto mt-6 max-w-md space-y-2 text-left text-navy/80">
+              <li className="flex gap-2"><span className="font-bold text-sky-deep">✓</span>8 cubic yards (~10-yard roll-off equivalent)</li>
+              <li className="flex gap-2"><span className="font-bold text-sky-deep">✓</span>Delivery within 48 business hours</li>
+              <li className="flex gap-2"><span className="font-bold text-sky-deep">✓</span>No rental clock — fill it as long as you need</li>
+              <li className="flex gap-2"><span className="font-bold text-sky-deep">✓</span>We collect when you&apos;re ready (weekday pickup)</li>
+            </ul>
+            <div className="mt-8">
+              <QuoteButton />
+            </div>
           </div>
         </div>
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="bg-slate-50 py-16">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-center text-2xl font-bold text-ink">How a Grizzly Bag Works</h2>
+      <section className="bg-sky-light/30">
+        <div className="mx-auto max-w-5xl px-4 py-16">
+          <h2 className="text-center text-2xl font-extrabold text-navy">How a Grizzly Bag Works</h2>
           <div className="mt-10 grid gap-8 md:grid-cols-4">
             {[
               { n: 1, t: "You Order", d: "Call or send a quote request and mention you want a bag." },
@@ -100,10 +106,10 @@ export default function GrizzlyBagsPage() {
               { n: 3, t: "You Fill It", d: "On your own time — a weekend, a month, a season. No clock." },
               { n: 4, t: "We Collect", d: "Call when it's full and we'll haul it away to a licensed facility." },
             ].map((step) => (
-              <div key={step.n} className="rounded-2xl bg-white p-6 text-center shadow-sm">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand text-lg font-bold text-white">{step.n}</div>
-                <h3 className="mt-4 font-semibold text-ink">{step.t}</h3>
-                <p className="mt-2 text-sm text-slate-600">{step.d}</p>
+              <div key={step.n} className="rounded-2xl border border-sky-light bg-white p-6 text-center shadow-card">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-navy text-lg font-extrabold text-white">{step.n}</div>
+                <h3 className="mt-4 font-bold text-navy">{step.t}</h3>
+                <p className="mt-2 text-sm text-navy/70">{step.d}</p>
               </div>
             ))}
           </div>
@@ -111,68 +117,76 @@ export default function GrizzlyBagsPage() {
       </section>
 
       {/* WHEN IT'S THE RIGHT CALL */}
-      <section className="mx-auto max-w-3xl px-4 py-16">
-        <h2 className="text-2xl font-bold text-ink">When a Grizzly Bag Is the Right Call</h2>
-        <ul className="mt-4 space-y-4 text-slate-700">
-          <li><strong>A single-room cleanout</strong> where 8 cubic yards is plenty — a garage purge, an attic clear-out, or one bedroom of furniture before a move.</li>
-          <li><strong>A driveway that can&apos;t host a roll-off</strong> for several days — the bag fits in the space of a few contractor bags and sits on private property.</li>
-          <li><strong>A cleanout staged over weeks</strong> — when you&apos;re sorting one weekend at a time, the no-rental-clock model works in your favor.</li>
-          <li><strong>A renovation that generates debris in waves</strong> — fill the bag through the project at your own pace.</li>
-        </ul>
+      <section className="bg-sand">
+        <div className="mx-auto max-w-3xl px-4 py-16">
+          <h2 className="text-2xl font-extrabold text-navy">When a Grizzly Bag Is the Right Call</h2>
+          <ul className="mt-4 space-y-4 text-navy/80">
+            <li><strong className="text-navy">A single-room cleanout</strong> where 8 cubic yards is plenty — a garage purge, an attic clear-out, or one bedroom of furniture before a move.</li>
+            <li><strong className="text-navy">A driveway that can&apos;t host a roll-off</strong> for several days — the bag fits in the space of a few contractor bags and sits on private property.</li>
+            <li><strong className="text-navy">A cleanout staged over weeks</strong> — when you&apos;re sorting one weekend at a time, the no-rental-clock model works in your favor.</li>
+            <li><strong className="text-navy">A renovation that generates debris in waves</strong> — fill the bag through the project at your own pace.</li>
+          </ul>
 
-        <h2 className="mt-12 text-2xl font-bold text-ink">When It&apos;s Not the Right Tool</h2>
-        <ul className="mt-4 space-y-4 text-slate-700">
-          <li><strong>Heavy renovation debris.</strong> Tile, plaster, and shingles need a roll-off, not a bag.</li>
-          <li><strong>A project bigger than one bag.</strong> Whole-home cleanouts may need a full-service crew or multiple bags.</li>
-          <li><strong>You want it gone today.</strong> Bag delivery runs 48 business hours — for same-day, ask about our crew.</li>
-        </ul>
+          <h2 className="mt-12 text-2xl font-extrabold text-navy">When It&apos;s Not the Right Tool</h2>
+          <ul className="mt-4 space-y-4 text-navy/80">
+            <li><strong className="text-navy">Heavy renovation debris.</strong> Tile, plaster, and shingles need a roll-off, not a bag.</li>
+            <li><strong className="text-navy">A project bigger than one bag.</strong> Whole-home cleanouts may need a full-service crew or multiple bags.</li>
+            <li><strong className="text-navy">You want it gone today.</strong> Bag delivery runs 48 business hours — for same-day, ask about our crew.</li>
+          </ul>
+        </div>
       </section>
 
       {/* ACCEPTED / NOT ACCEPTED */}
-      <section className="bg-slate-50 py-16">
-        <div className="mx-auto grid max-w-5xl gap-10 px-4 md:grid-cols-2">
-          <div className="rounded-2xl border border-emerald-200 bg-white p-6">
-            <h3 className="text-lg font-bold text-emerald-700">✓ What You Can Put In</h3>
-            <ul className="mt-4 space-y-2 text-slate-700">
-              {accepted.map((i) => <li key={i} className="flex gap-2"><span className="text-emerald-600">•</span>{i}</li>)}
+      <section className="bg-sky-light/30">
+        <div className="mx-auto grid max-w-5xl gap-10 px-4 py-16 md:grid-cols-2">
+          <div className="rounded-2xl border border-sky-light bg-white p-6 shadow-card">
+            <h3 className="text-lg font-extrabold text-navy">✓ What You Can Put In</h3>
+            <ul className="mt-4 space-y-2 text-navy/80">
+              {accepted.map((i) => <li key={i} className="flex gap-2"><span className="text-sky-deep">•</span>{i}</li>)}
             </ul>
           </div>
-          <div className="rounded-2xl border border-red-200 bg-white p-6">
-            <h3 className="text-lg font-bold text-red-700">✕ What&apos;s Not Allowed</h3>
-            <ul className="mt-4 space-y-2 text-slate-700">
-              {notAccepted.map((i) => <li key={i} className="flex gap-2"><span className="text-red-500">•</span>{i}</li>)}
+          <div className="rounded-2xl border border-cta/40 bg-white p-6 shadow-card">
+            <h3 className="text-lg font-extrabold text-cta-dark">✕ What&apos;s Not Allowed</h3>
+            <ul className="mt-4 space-y-2 text-navy/80">
+              {notAccepted.map((i) => <li key={i} className="flex gap-2"><span className="text-cta-dark">•</span>{i}</li>)}
             </ul>
           </div>
         </div>
       </section>
 
       {/* WHERE WE DELIVER */}
-      <section className="mx-auto max-w-3xl px-4 py-16">
-        <h2 className="text-2xl font-bold text-ink">Where We Deliver Grizzly Bags</h2>
-        <p className="mt-4 text-slate-700">
-          Across all of {site.region}, {site.state}, including:
-        </p>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {cities.map((c) => (
-            <Link key={c.slug} href={`/service-areas/${c.slug}`} className="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700 transition hover:bg-brand hover:text-white">
-              {c.name}
-            </Link>
-          ))}
+      <section className="bg-sand">
+        <div className="mx-auto max-w-3xl px-4 py-16">
+          <h2 className="text-2xl font-extrabold text-navy">Where We Deliver Grizzly Bags</h2>
+          <p className="mt-4 text-navy/80">
+            Across all of {site.region}, {site.state}, including:
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {cities.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/service-areas/${c.slug}`}
+                className="rounded-full border border-sky-light bg-sky-light/40 px-3 py-1.5 text-sm font-semibold text-navy transition hover:border-navy hover:bg-navy hover:text-white"
+              >
+                {c.name}
+              </Link>
+            ))}
+          </div>
+          <p className="mt-6 text-sm text-navy/70">
+            If your town isn&apos;t listed, call {site.phone} — we likely already serve it.
+          </p>
         </div>
-        <p className="mt-6 text-sm text-slate-600">
-          If your town isn&apos;t listed, call {site.phone} — we likely already serve it.
-        </p>
       </section>
 
       {/* FAQ */}
-      <section className="bg-slate-50 py-16">
-        <div className="mx-auto max-w-3xl px-4">
-          <h2 className="text-2xl font-bold text-ink">Grizzly Bag FAQs</h2>
+      <section className="bg-sky-light/30">
+        <div className="mx-auto max-w-3xl px-4 py-16">
+          <h2 className="text-2xl font-extrabold text-navy">Grizzly Bag FAQs</h2>
           <div className="mt-8 space-y-4">
             {faqs.map((f) => (
-              <details key={f.q} className="rounded-xl border border-slate-200 bg-white p-5">
-                <summary className="cursor-pointer font-semibold text-ink">{f.q}</summary>
-                <p className="mt-3 text-slate-700">{f.a}</p>
+              <details key={f.q} className="rounded-2xl border border-sky-light bg-white p-5 shadow-card">
+                <summary className="cursor-pointer font-bold text-navy">{f.q}</summary>
+                <p className="mt-3 text-navy/80">{f.a}</p>
               </details>
             ))}
           </div>

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { site, trustBadges } from "@/lib/site";
+import WaveDivider from "@/components/WaveDivider";
 
 // ---------------- Buttons ----------------
 export function CallButton({ className = "" }: { className?: string }) {
   return (
     <a
       href={site.phoneHref}
-      className={`inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-brand-dark ${className}`}
+      className={`inline-flex items-center justify-center rounded-full bg-navy px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-navy-dark ${className}`}
     >
       Call {site.phone}
     </a>
@@ -17,7 +18,7 @@ export function QuoteButton({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/get-a-quote"
-      className={`inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-ink shadow-sm transition hover:brightness-95 ${className}`}
+      className={`inline-flex items-center justify-center rounded-full bg-cta px-6 py-3 font-semibold text-navy shadow-sm transition hover:bg-cta-dark hover:text-white ${className}`}
     >
       Get Your Free Quote
     </Link>
@@ -25,22 +26,35 @@ export function QuoteButton({ className = "" }: { className?: string }) {
 }
 
 // ---------------- Trust bar ----------------
-export function TrustBar() {
+export function TrustBar({ tone = "light" }: { tone?: "light" | "dark" }) {
+  const chipClass =
+    tone === "dark"
+      ? "border-sky/30 bg-sky/10 text-sky-light"
+      : "border-sky-light bg-sky-light/40 text-navy";
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-600">
+    <div className="flex flex-wrap items-center justify-center gap-2">
       {trustBadges.map((b) => (
-        <span key={b} className="inline-flex items-center gap-1.5">
-          <CheckIcon /> {b}
+        <span
+          key={b}
+          className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${chipClass}`}
+        >
+          <CheckIcon tone={tone} /> {b}
         </span>
       ))}
     </div>
   );
 }
 
-function CheckIcon() {
+function CheckIcon({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
-    <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <path d="M5 10.5l3 3 7-7" stroke="#0f766e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M5 10.5l3 3 7-7"
+        stroke={tone === "dark" ? "#7dd3fc" : "#0a2540"}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -59,14 +73,18 @@ export function SectionHeading({
 }) {
   return (
     <div className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
-      {eyebrow && <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-brand">{eyebrow}</p>}
-      <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h2>
-      {subtitle && <p className="mt-4 text-lg text-slate-600">{subtitle}</p>}
+      {eyebrow && (
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">{title}</h2>
+      {subtitle && <p className="mt-4 text-lg text-navy/70">{subtitle}</p>}
     </div>
   );
 }
 
-// ---------------- Final CTA band ----------------
+// ---------------- Final CTA band (navy with wave lip on top) ----------------
 export function CtaBand({
   heading = "Ready to Clear Your Space?",
   sub = "Send us photos of what you need removed and get upfront pricing with no hidden fees.",
@@ -75,18 +93,21 @@ export function CtaBand({
   sub?: string;
 }) {
   return (
-    <section className="bg-brand">
-      <div className="mx-auto max-w-5xl px-4 py-16 text-center">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">{heading}</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-teal-50">{sub}</p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <QuoteButton />
-          <a
-            href={site.phoneHref}
-            className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-brand"
-          >
-            Call {site.phone}
-          </a>
+    <section className="relative">
+      <WaveDivider fill="#0a2540" />
+      <div className="bg-navy">
+        <div className="mx-auto max-w-5xl px-4 py-16 text-center">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">{heading}</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-sky-light">{sub}</p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <QuoteButton />
+            <a
+              href={site.phoneHref}
+              className="inline-flex items-center justify-center rounded-full border-2 border-sky-light px-6 py-3 font-semibold text-white transition hover:bg-sky-light hover:text-navy"
+            >
+              Call {site.phone}
+            </a>
+          </div>
         </div>
       </div>
     </section>

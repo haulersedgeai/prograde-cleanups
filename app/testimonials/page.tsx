@@ -19,24 +19,27 @@ const reviews = [
 export default function TestimonialsPage() {
   return (
     <>
-      <section className="bg-ink">
+      <section className="bg-navy">
         <div className="mx-auto max-w-5xl px-4 py-20 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">Neighbors say</p>
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">Customer Reviews</h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-200">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-sky-light/90">
             See what {site.region} residents have to say about {site.name}.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-16">
-        <div className="grid gap-6 md:grid-cols-2">
-          {reviews.map((r, i) => (
-            <figure key={i} className="rounded-2xl border border-slate-200 p-6">
-              <div className="text-accent">★★★★★</div>
-              <blockquote className="mt-3 text-slate-700">&ldquo;{r.q}&rdquo;</blockquote>
-              <figcaption className="mt-4 text-sm font-semibold text-ink">{r.n} <span className="font-normal text-slate-500">· {r.c}</span></figcaption>
-            </figure>
-          ))}
+      <section className="bg-sand">
+        <div className="mx-auto max-w-5xl px-4 py-16">
+          <div className="grid gap-6 md:grid-cols-2">
+            {reviews.map((r, i) => (
+              <figure key={i} className="rounded-2xl border border-sky-light bg-white p-6 shadow-card">
+                <div className="text-cta">★★★★★</div>
+                <blockquote className="mt-3 text-navy/80">&ldquo;{r.q}&rdquo;</blockquote>
+                <figcaption className="mt-4 text-sm font-bold text-navy">{r.n} <span className="font-normal text-navy/50">· {r.c}</span></figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
