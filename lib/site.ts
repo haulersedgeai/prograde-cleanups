@@ -5,8 +5,8 @@
 // =============================================================
 
 export const site = {
-  name: "ProGrade Cleanouts",
-  legalName: "ProGrade Cleanouts",
+  name: "ProGrade Cleanups",
+  legalName: "ProGrade Cleanups",
   tagline: "Your Mess Is Our Mission",
   phone: "(518) 833-9416",
   phoneHref: "tel:+15188339416",

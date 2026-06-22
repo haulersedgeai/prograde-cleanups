@@ -1,6 +1,6 @@
-# ProGrade Cleanouts — Next.js Site
+# ProGrade Cleanups — Next.js Site
 
-A hyper-local-SEO junk removal site for ProGrade Cleanouts (Hampton Roads, VA),
+A hyper-local-SEO junk removal site for ProGrade Cleanups (Hampton Roads, VA),
 modeled on the same data-driven structure we used for The Junk Lord.
 
 ## What's here
@@ -48,7 +48,7 @@ npm run build
 # 2. Initialize git and push to GitHub
 git init
 git add .
-git commit -m "Initial ProGrade Cleanouts site"
+git commit -m "Initial ProGrade Cleanups site"
 gh repo create prograde-cleanouts --public --source=. --push
 # (or: create the repo on github.com, then git remote add origin <url> && git push -u origin main)
 

@@ -11,7 +11,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-ink">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={site.images.hero} alt="ProGrade Cleanouts junk removal service" className="absolute inset-0 h-full w-full object-cover opacity-30" />
+        <img src={site.images.hero} alt="ProGrade Cleanups junk removal service" className="absolute inset-0 h-full w-full object-cover opacity-30" />
         <div className="relative mx-auto max-w-5xl px-4 py-24 text-center sm:py-32">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
             Your Mess Is <span className="text-accent">Our Mission</span>

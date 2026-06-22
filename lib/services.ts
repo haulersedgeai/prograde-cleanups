@@ -21,9 +21,9 @@ export const services: Service[] = [
     category: "Junk Removal",
     short: "Sofas, chairs, tables, mattresses — gone fast.",
     intro:
-      "Old furniture is heavy, awkward, and a pain to get rid of. ProGrade Cleanouts handles the lifting, hauling, and disposal of furniture across Hampton Roads — from a single couch to a whole house of pieces. We navigate stairs, tight doorways, and second-floor bedrooms so you don't have to.",
+      "Old furniture is heavy, awkward, and a pain to get rid of. ProGrade Cleanups handles the lifting, hauling, and disposal of furniture across Hampton Roads — from a single couch to a whole house of pieces. We navigate stairs, tight doorways, and second-floor bedrooms so you don't have to.",
     items: ["Sofas & sectionals", "Recliners & chairs", "Mattresses & box springs", "Dressers & wardrobes", "Dining sets", "Desks & office furniture", "Bookcases & shelving", "Patio furniture"],
-    metaTitle: "Furniture Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Furniture Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Fast, affordable furniture removal in Norfolk, Virginia Beach, Chesapeake & all of Hampton Roads. Sofa, mattress & bedroom set pickup. Volume pricing. Call (518) 833-9416.",
   },
@@ -35,7 +35,7 @@ export const services: Service[] = [
     intro:
       "Upgrading your kitchen or clearing out an old unit? We remove appliances of every size from anywhere in your home or business across Hampton Roads — and recycle responsibly whenever possible. No need to drag that fridge to the curb.",
     items: ["Refrigerators & freezers", "Washers & dryers", "Stoves & ovens", "Dishwashers", "Microwaves", "Water heaters", "AC & window units", "Small kitchen appliances"],
-    metaTitle: "Appliance Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Appliance Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Refrigerator, washer, dryer & stove removal across Norfolk, Virginia Beach & Hampton Roads. Eco-friendly disposal, volume pricing, same-day service. Call (518) 833-9416.",
   },
@@ -47,7 +47,7 @@ export const services: Service[] = [
     intro:
       "Renovating a kitchen, bath, or whole property? We haul away construction and renovation debris by volume — not by weight — so a remodel doesn't blow your budget on disposal. We work with homeowners, DIYers, and contractors throughout Hampton Roads.",
     items: ["Drywall & plaster", "Lumber & wood scraps", "Flooring & carpet", "Tile & countertops", "Cabinets & doors", "Roofing debris (reasonable amounts)", "Renovation trash", "Packaging & jobsite waste"],
-    metaTitle: "Construction Debris Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Construction Debris Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Affordable construction & renovation debris removal in Hampton Roads, VA. Drywall, lumber, flooring & tile hauled by volume, not weight. Call (518) 833-9416.",
   },
@@ -59,7 +59,7 @@ export const services: Service[] = [
     intro:
       "Storm cleanup, overgrown brush, or a yard full of debris? We load and haul yard waste from anywhere on your property across Hampton Roads, leaving your outdoor space clean and clear.",
     items: ["Branches & limbs", "Leaves & grass clippings", "Brush & hedge trimmings", "Storm debris", "Old mulch", "Fallen fencing", "Lawn furniture", "Outdoor junk piles"],
-    metaTitle: "Yard Waste Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Yard Waste Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Yard waste, brush & storm debris removal across Norfolk, Virginia Beach & Hampton Roads. Fast pickup, volume pricing. Call (518) 833-9416 for a free quote.",
   },
@@ -71,7 +71,7 @@ export const services: Service[] = [
     intro:
       "The everyday clutter that piles up — boxes, electronics, bags of stuff, and random junk. Send us a photo and we'll give you an instant quote, then haul it all away on your schedule.",
     items: ["Boxes & clutter", "Electronics & TVs", "Bagged trash", "Toys & games", "Clothing & textiles", "Décor & household goods", "Exercise equipment", "Miscellaneous junk"],
-    metaTitle: "Household Junk Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Household Junk Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Household junk removal in Hampton Roads, VA. Electronics, boxes, clutter & everyday junk hauled fast. Instant photo quotes, no hidden fees. Call (518) 833-9416.",
   },
@@ -83,7 +83,7 @@ export const services: Service[] = [
     intro:
       "We haul away scrap metal and wood from cleanouts, projects, and demolitions across Hampton Roads — and recycle what we can. Fair volume pricing on loads big and small.",
     items: ["Scrap metal", "Old lumber", "Metal furniture & frames", "Appliances for scrap", "Fencing material", "Pipe & ductwork", "Metal shelving", "Wood pallets"],
-    metaTitle: "Scrap Metal & Wood Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Scrap Metal & Wood Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Scrap metal & wood removal across Hampton Roads, VA. Recycled responsibly, priced by volume. Norfolk, Virginia Beach, Chesapeake & more. Call (518) 833-9416.",
   },
@@ -95,7 +95,7 @@ export const services: Service[] = [
     intro:
       "Replacing a bed or clearing a rental? We remove mattresses and box springs from any room — upstairs, basement, or tight coastal-home staircases — and dispose of them responsibly across Hampton Roads.",
     items: ["Twin / Full / Queen / King", "California King", "Memory foam", "Box springs", "Adjustable bed bases", "Futons & daybeds", "Crib mattresses", "Sleeper sofa mattresses"],
-    metaTitle: "Mattress Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Mattress Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Fast mattress & box spring removal in Hampton Roads, VA. Any size, any room. Volume pricing, same-day service available. Call (518) 833-9416.",
   },
@@ -107,7 +107,7 @@ export const services: Service[] = [
     intro:
       "An old hot tub is one of the hardest things to get rid of. We safely dismantle, cut, and haul away hot tubs from decks, patios, and backyards across Hampton Roads, leaving the area clean. (Electrical must be disconnected before removal.)",
     items: ["Above-ground hot tubs", "Portable spas", "Jacuzzi-style units", "Inflatable hot tubs", "In-deck spas", "Hot tub covers & surrounds", "Old fiberglass shells", "Non-working units"],
-    metaTitle: "Hot Tub Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Hot Tub Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Hot tub & spa removal in Hampton Roads, VA. We cut, haul & dispose of old hot tubs safely. Norfolk, Virginia Beach & beyond. Call (518) 833-9416.",
   },
@@ -120,7 +120,7 @@ export const services: Service[] = [
     intro:
       "Garages collect everything. We clear the whole space — boxes, old furniture, tools, appliances, and junk from the rafters to the corners — so you can park your car again. Full-service across Hampton Roads.",
     items: ["Boxes & stored belongings", "Old furniture", "Appliances", "Tools & equipment", "Holiday decorations", "Tires (fees may apply)", "Yard equipment", "General clutter"],
-    metaTitle: "Garage Cleanouts in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Garage Cleanouts in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Full-service garage cleanouts in Hampton Roads, VA. We clear furniture, junk & debris and sweep up. Volume pricing, same-day service. Call (518) 833-9416.",
   },
@@ -132,7 +132,7 @@ export const services: Service[] = [
     intro:
       "Whether it's decades of storage or flood-damaged debris, we handle complete basement cleanouts across Hampton Roads — stairs, tight spaces, and heavy items included.",
     items: ["Boxes & totes", "Old furniture & mattresses", "Appliances", "Shelving units", "Water-damaged items", "Construction debris", "Holiday décor", "Loose trash"],
-    metaTitle: "Basement Cleanouts in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Basement Cleanouts in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Affordable basement cleanouts in Hampton Roads, VA. We remove furniture, junk & debris from any space. Norfolk, Virginia Beach & more. Call (518) 833-9416.",
   },
@@ -144,7 +144,7 @@ export const services: Service[] = [
     intro:
       "Preparing a home for sale, handling a move-out, or clearing accumulated clutter? We remove everything — every room, attic, garage, and basement — and leave the property broom-clean. Trusted by homeowners, landlords, and realtors across Hampton Roads.",
     items: ["Furniture & appliances", "Clothing & household goods", "Accumulated junk & boxes", "Heavy & bulky items", "Trash & debris", "Garage & shed contents", "Yard waste", "Everything in between"],
-    metaTitle: "Whole-House Cleanouts in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Whole-House Cleanouts in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Complete whole-house cleanouts in Hampton Roads, VA. Estate homes, move-outs & property turnovers cleared fast. Volume pricing. Call (518) 833-9416.",
   },
@@ -156,7 +156,7 @@ export const services: Service[] = [
     intro:
       "Clearing a loved one's home is hard. We handle estate cleanouts across Hampton Roads with care and respect — sorting, removing, and disposing of belongings so families don't have to face it alone. We don't just toss everything; we handle it thoughtfully.",
     items: ["Furniture & household items", "Personal belongings", "Appliances", "Clothing & textiles", "Books & documents", "Garage & shed contents", "Heavy items", "Complete property clearing"],
-    metaTitle: "Estate Cleanouts in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Estate Cleanouts in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Compassionate, full-service estate cleanouts in Hampton Roads, VA. Respectful clearing for families, executors & realtors. Call (518) 833-9416.",
   },
@@ -168,7 +168,7 @@ export const services: Service[] = [
     intro:
       "Hoarding situations take patience and discretion. We provide compassionate, judgment-free cleanouts across Hampton Roads — sorting, hauling, and restoring safe, livable space for families, homeowners, and property managers.",
     items: ["Clothing & textiles", "Boxes, bags & loose trash", "Paper & documents", "Furniture & appliances", "Household goods", "Food-waste-free debris", "Multi-room clutter", "Full or partial cleanouts"],
-    metaTitle: "Hoarder Cleanouts in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Hoarder Cleanouts in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Compassionate, discreet hoarder cleanouts in Hampton Roads, VA. Judgment-free, full-service clearing for homes & rentals. Call (518) 833-9416.",
   },
@@ -180,7 +180,7 @@ export const services: Service[] = [
     intro:
       "Moving is stressful enough. We clear out leftover furniture, junk, and belongings from homes, apartments, and rentals across Hampton Roads — fast turnaround for tenants, landlords, and property managers.",
     items: ["Leftover furniture", "Appliances", "Trash & belongings", "Carpet & flooring scraps", "Garage & storage items", "Boxes & clutter", "Outdoor junk", "Complete unit clearing"],
-    metaTitle: "Move-Out Cleanouts in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Move-Out Cleanouts in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Fast move-out & rental cleanouts in Hampton Roads, VA. Homes, apartments & turnovers cleared on your timeline. Volume pricing. Call (518) 833-9416.",
   },
@@ -192,7 +192,7 @@ export const services: Service[] = [
     intro:
       "Downsizing, relocating, or clearing a commercial space? We handle office cleanouts, retail junk, and business debris across Hampton Roads — with flexible scheduling so your operation keeps moving.",
     items: ["Desks & office furniture", "Cubicles & partitions", "Filing cabinets", "Electronics & e-waste", "Retail fixtures & shelving", "Old inventory", "Renovation debris", "Bulk junk"],
-    metaTitle: "Commercial Junk Removal in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Commercial Junk Removal in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Commercial junk removal & office cleanouts in Hampton Roads, VA. Furniture, electronics & business debris cleared fast. Flexible scheduling. Call (518) 833-9416.",
   },
@@ -204,7 +204,7 @@ export const services: Service[] = [
     intro:
       "When a tenant leaves debris behind or a property needs clearing fast, we step in. Full-service foreclosure and eviction cleanouts across Hampton Roads for landlords, realtors, property managers, and investors — fast turnaround to minimize vacancy time.",
     items: ["Trash & abandoned belongings", "Furniture & mattresses", "Appliances", "Garage & basement junk", "Yard debris", "Construction debris", "Heavy items", "Complete property clearing"],
-    metaTitle: "Foreclosure & Eviction Cleanouts in Hampton Roads, VA | ProGrade Cleanouts",
+    metaTitle: "Foreclosure & Eviction Cleanouts in Hampton Roads, VA | ProGrade Cleanups",
     metaDescription:
       "Fast foreclosure & eviction cleanouts in Hampton Roads, VA. Full property clearing for landlords, banks & property managers. Call (518) 833-9416.",
   },
