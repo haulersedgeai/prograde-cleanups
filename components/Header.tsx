@@ -10,6 +10,8 @@ const nav = [
   { href: "/pricing", label: "Pricing" },
   { href: "/testimonials", label: "Reviews" },
   { href: "/faq", label: "FAQ" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 function Wordmark({ size = "text-xl" }: { size?: string }) {

@@ -65,12 +65,26 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-sky-light/60">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-sm text-navy/60 sm:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-navy/60 sm:flex-row">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <Link href="/about" className="hover:text-navy">About</Link>
             <Link href="/contact" className="hover:text-navy">Contact</Link>
+            <Link href="/privacy" className="hover:text-navy">Privacy</Link>
+            <Link href="/terms" className="hover:text-navy">Terms</Link>
             <span>{site.region}, {site.state}</span>
           </div>
+        </div>
+        <div className="mx-auto max-w-7xl px-4 pb-6 text-center text-xs text-navy/50">
+          Site by{" "}
+          <a
+            href="https://adimize.com/?ref=progradecleanups"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-navy hover:underline"
+          >
+            Adimize — Local Service Digital Marketing
+          </a>
         </div>
       </div>
     </footer>
