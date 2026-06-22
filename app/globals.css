@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { padding-bottom: 56px; } /* room for mobile sticky bar */
+@media (min-width: 1024px) { body { padding-bottom: 0; } }
