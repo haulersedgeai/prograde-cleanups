@@ -78,8 +78,7 @@ export default function GrizzlyBagsPage() {
       <section className="bg-sand">
         <div className="mx-auto max-w-3xl px-4 py-16">
           <div className="rounded-3xl border-2 border-navy bg-white p-8 text-center shadow-lift">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">Anchor price</p>
-            <h2 className="mt-2 text-2xl font-extrabold text-navy">Grizzly Bag — Full Service</h2>
+            <h2 className="text-2xl font-extrabold text-navy">Grizzly Bag — Full Service</h2>
             <p className="mt-2 text-5xl font-extrabold text-navy">$299</p>
             <p className="mt-2 text-navy/70">Delivery, the bag, and collection — all included.</p>
             <ul className="mx-auto mt-6 max-w-md space-y-2 text-left text-navy/80">

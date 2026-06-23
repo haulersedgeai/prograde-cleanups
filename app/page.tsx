@@ -52,8 +52,8 @@ export default function Home() {
     <>
       {/* HERO — navy, left-aligned, asymmetric */}
       <section className="relative overflow-hidden bg-navy">
-        {/* Background photo — landscape job shot, hidden on mobile so the solid navy stays clean */}
-        <div aria-hidden="true" className="absolute inset-0 hidden md:block">
+        {/* Background photo — landscape job shot, with heavier overlay on mobile for readability */}
+        <div aria-hidden="true" className="absolute inset-0">
           <Image
             src="/images/yard-debris-hampton-roads.webp"
             alt=""
@@ -62,8 +62,8 @@ export default function Home() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          {/* Navy overlay — darker on the left where the headline sits, slightly lighter on the right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/88 to-navy/75" />
+          {/* Navy overlay — flat ~90% on mobile, asymmetric gradient on desktop (darker left, lighter right) */}
+          <div className="absolute inset-0 bg-navy/90 md:bg-gradient-to-r md:from-navy/95 md:via-navy/88 md:to-navy/75" />
           <div className="absolute inset-0 bg-navy/10" />
         </div>
         <div

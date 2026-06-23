@@ -53,11 +53,6 @@ export default function PricingPage() {
                     {t.price}
                   </p>
                   <p className={`mt-2 text-xs ${isAnchor ? "text-sky-light/90" : "text-navy/60"}`}>{t.note}</p>
-                  {isAnchor && (
-                    <p className="mt-3 inline-block rounded-full bg-cta px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-navy">
-                      Anchor price
-                    </p>
-                  )}
                 </div>
               );
             })}
