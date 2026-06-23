@@ -36,6 +36,19 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="bg-sand">
+        <div className="mx-auto max-w-3xl px-4 pb-16">
+          <SectionHeading title="Meet the Owners" eyebrow="The team" center={false} />
+          <p className="mt-4 text-lg leading-relaxed text-navy/80">
+            {site.name} is veteran-owned and locally run by {site.ownerNames} — two Hampton Roads vets who&apos;d
+            rather be hauling than talking about it. They started this together to do honest, hard work for the
+            neighbors they already knew. They show up when they say they will, treat your driveway like their own,
+            and take real pride in leaving a place cleaner than they found it. The reviews from folks across
+            Norfolk, Virginia Beach, and Chesapeake say it better than they could.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-sky-light/30">
         <div className="mx-auto max-w-5xl px-4 py-16">
           <SectionHeading title="Why People Choose Us" eyebrow="The basics" />
