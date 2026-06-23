@@ -52,6 +52,20 @@ export default function Home() {
     <>
       {/* HERO — navy, left-aligned, asymmetric */}
       <section className="relative overflow-hidden bg-navy">
+        {/* Background photo — landscape job shot, hidden on mobile so the solid navy stays clean */}
+        <div aria-hidden="true" className="absolute inset-0 hidden md:block">
+          <Image
+            src="/images/yard-debris-hampton-roads.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Navy overlay — darker on the left where the headline sits, slightly lighter on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/88 to-navy/75" />
+          <div className="absolute inset-0 bg-navy/10" />
+        </div>
         <div
           aria-hidden="true"
           className="absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-sky/15 blur-3xl"
@@ -60,7 +74,7 @@ export default function Home() {
           aria-hidden="true"
           className="absolute -bottom-24 -left-16 h-[300px] w-[300px] rounded-full bg-sky-deep/10 blur-3xl"
         />
-        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 pt-20 pb-28 sm:pt-28 lg:grid-cols-12 lg:pb-32">
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-8 px-4 pt-20 pb-28 sm:pt-28 lg:grid-cols-12 lg:pb-32">
           <div className="lg:col-span-8">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sky-light">
               <span className="h-1.5 w-1.5 rounded-full bg-sky-deep" />
