@@ -1,10 +1,44 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site, pricingTiers, trustBadges } from "@/lib/site";
 import { services } from "@/lib/services";
 import { cities } from "@/lib/cities";
-import { QuoteButton, CtaBand, SectionHeading } from "@/components/ui";
+import { reviews } from "@/lib/reviews";
+import { QuoteButton, CtaBand, SectionHeading, GoogleRatingBadge } from "@/components/ui";
 import WaveDivider from "@/components/WaveDivider";
 import { ServiceIcon } from "@/components/ServiceIcons";
+
+const jobPhotos = [
+  {
+    src: "/images/garage-cleanout-norfolk.webp",
+    alt: "Garage cleanout in Norfolk, VA — ProGrade Cleanups crew hauling boxes and old furniture",
+    width: 1360,
+    height: 1020,
+  },
+  {
+    src: "/images/furniture-removal-virginia-beach.webp",
+    alt: "Furniture removal in Virginia Beach — loaded couch and household items ready for haul-off",
+    width: 765,
+    height: 1020,
+  },
+  {
+    src: "/images/yard-debris-hampton-roads.webp",
+    alt: "Yard debris removal in Hampton Roads — brush and yard waste cleared by ProGrade Cleanups",
+    width: 1360,
+    height: 1020,
+  },
+  {
+    src: "/images/moving-loadout-chesapeake.webp",
+    alt: "Move-out load by ProGrade Cleanups in Chesapeake, VA — trailer loaded with household items",
+    width: 680,
+    height: 1020,
+  },
+];
+
+const homepageReviewNames = ["John Wilson", "Cynthia Jacko-Wise", "Kayla Hartman"];
+const homepageReviews = homepageReviewNames
+  .map((n) => reviews.find((r) => r.name === n))
+  .filter((r): r is (typeof reviews)[number] => Boolean(r));
 
 const cityGroups: { label: string; slugs: string[] }[] = [
   { label: "Southside", slugs: ["norfolk", "virginia-beach", "chesapeake", "portsmouth", "suffolk"] },
@@ -50,6 +84,9 @@ export default function Home() {
               >
                 Call {site.phone}
               </a>
+            </div>
+            <div className="mt-6">
+              <GoogleRatingBadge tone="dark" />
             </div>
             <div className="mt-10 flex flex-wrap gap-2">
               {trustBadges.map((b) => (
@@ -113,6 +150,40 @@ export default function Home() {
             >
               View All Services →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* REAL WORK — photo grid on navy */}
+      <section className="relative">
+        <WaveDivider fill="#0a2540" />
+        <div className="bg-navy">
+          <div className="mx-auto max-w-7xl px-4 pb-20 pt-4">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">On the job</p>
+              <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Real Work, Real Results</h2>
+              <p className="mt-4 text-lg text-sky-light/90">
+                Real jobs across {site.region} — no stock photos.
+              </p>
+            </div>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+              {jobPhotos.map((p) => (
+                <div
+                  key={p.src}
+                  className="overflow-hidden rounded-2xl border border-sky/20 bg-navy-light/40 shadow-lift"
+                >
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src={p.src}
+                      alt={p.alt}
+                      fill
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -200,16 +271,12 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-20">
           <SectionHeading eyebrow="What Our Customers Say" title={`Trusted Across ${site.region}`} />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              { q: "Fast, professional, and affordable! They removed all my old furniture in under an hour.", n: "Sarah M.", c: "Norfolk, VA" },
-              { q: "The team was on time, efficient, and super friendly. Hauled away my garage full of junk for a great price!", n: "James T.", c: "Virginia Beach" },
-              { q: "Best junk removal I've used. Transparent pricing, no hidden fees, and they recycled everything!", n: "Michelle R.", c: "Chesapeake" },
-            ].map((r) => (
-              <figure key={r.n} className="rounded-2xl border border-sky-light bg-white p-6 shadow-card">
-                <div className="text-cta">★★★★★</div>
-                <blockquote className="mt-3 text-navy/80">&ldquo;{r.q}&rdquo;</blockquote>
+            {homepageReviews.map((r) => (
+              <figure key={r.name} className="rounded-2xl border border-sky-light bg-white p-6 shadow-card">
+                <div className="text-cta" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote className="mt-3 text-navy/80">&ldquo;{r.text}&rdquo;</blockquote>
                 <figcaption className="mt-4 text-sm font-bold text-navy">
-                  {r.n} <span className="font-normal text-navy/50">· {r.c}</span>
+                  {r.name} <span className="font-normal text-navy/50">· {r.tag}</span>
                 </figcaption>
               </figure>
             ))}

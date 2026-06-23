@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { site } from "@/lib/site";
 import { CtaBand, SectionHeading } from "@/components/ui";
 
@@ -37,15 +38,41 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-sand">
-        <div className="mx-auto max-w-3xl px-4 pb-16">
-          <SectionHeading title="Meet the Owners" eyebrow="The team" center={false} />
-          <p className="mt-4 text-lg leading-relaxed text-navy/80">
-            {site.name} is veteran-owned and locally run by {site.ownerNames} — two Hampton Roads vets who&apos;d
-            rather be hauling than talking about it. They started this together to do honest, hard work for the
-            neighbors they already knew. They show up when they say they will, treat your driveway like their own,
-            and take real pride in leaving a place cleaner than they found it. The reviews from folks across
-            Norfolk, Virginia Beach, and Chesapeake say it better than they could.
-          </p>
+        <div className="mx-auto max-w-5xl px-4 pb-16">
+          <div className="max-w-3xl">
+            <SectionHeading title="Meet the Owners" eyebrow="The team" center={false} />
+            <p className="mt-4 text-lg leading-relaxed text-navy/80">
+              {site.name} is veteran-owned and locally run by {site.ownerNames} — two Hampton Roads veterans
+              serving their own neighbors. They started this together to do honest, hard work for the people they
+              already knew. They show up when they say they will, treat your driveway like their own, and take
+              real pride in leaving a place cleaner than they found it. The reviews from folks across Norfolk,
+              Virginia Beach, and Chesapeake say it better than they could.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl border border-sky-light shadow-card">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/images/garage-cleanout-norfolk.webp"
+                  alt="Garage cleanout in Norfolk, VA — Noah and Harry hauling boxes for a local family"
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-sky-light shadow-card">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/images/yard-debris-hampton-roads.webp"
+                  alt="Yard debris removal in Hampton Roads — ProGrade Cleanups clearing brush for a homeowner"
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

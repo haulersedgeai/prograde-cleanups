@@ -25,6 +25,26 @@ export function QuoteButton({ className = "" }: { className?: string }) {
   );
 }
 
+// ---------------- Google rating badge ----------------
+export function GoogleRatingBadge({ tone = "dark" }: { tone?: "light" | "dark" }) {
+  const isDark = tone === "dark";
+  return (
+    <span
+      className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm font-semibold ${
+        isDark
+          ? "border-sky/30 bg-sky/10 text-sky-light"
+          : "border-sky-light bg-white text-navy shadow-card"
+      }`}
+      aria-label={`${site.googleRating} stars from ${site.googleReviewCount} Google reviews`}
+    >
+      <span className="text-cta" aria-hidden="true">★</span>
+      <span className={isDark ? "text-white" : "text-navy"}>{site.googleRating}</span>
+      <span className={isDark ? "text-sky-light/70" : "text-navy/50"}>·</span>
+      <span>{site.googleReviewCount} Google Reviews</span>
+    </span>
+  );
+}
+
 // ---------------- Trust bar ----------------
 export function TrustBar({ tone = "light" }: { tone?: "light" | "dark" }) {
   const chipClass =

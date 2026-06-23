@@ -15,7 +15,10 @@ export const site = {
   baseCity: "Norfolk",
   state: "VA",
   region: "Hampton Roads",
-  ownerNames: "Harry Torres & Noah Rodriguez",
+  ownerNames: "Noah & Harry",
+  veteranOwned: true,
+  googleRating: "5.0",
+  googleReviewCount: "79",
   hours: "Mon–Sun: 8:00 AM – 6:00 PM",
   url: "https://www.progradecleanups.com",
   social: {
@@ -46,6 +49,7 @@ export const pricingTiers = [
 ] as const;
 
 export const trustBadges = [
+  "Veteran-Owned",
   "Instant photo quotes",
   "No hidden fees",
   "Same-day service",
