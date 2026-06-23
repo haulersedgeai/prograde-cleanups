@@ -6,12 +6,8 @@ import { site } from "@/lib/site";
 const nav = [
   { href: "/services", label: "Services" },
   { href: "/service-areas", label: "Service Areas" },
-  { href: "/services/grizzly-dumpster-bags", label: "Grizzly Bags" },
   { href: "/pricing", label: "Pricing" },
   { href: "/testimonials", label: "Reviews" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 function Wordmark({ size = "text-xl" }: { size?: string }) {

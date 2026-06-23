@@ -35,6 +35,9 @@ export default function Footer() {
                 <Link href={`/services/${s.slug}`} className="hover:text-navy">{s.name}</Link>
               </li>
             ))}
+            <li>
+              <Link href="/services/grizzly-dumpster-bags" className="hover:text-navy">Grizzly Dumpster Bags</Link>
+            </li>
             <li><Link href="/services" className="font-semibold text-navy hover:underline">View All Services →</Link></li>
           </ul>
         </div>
@@ -70,6 +73,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <Link href="/about" className="hover:text-navy">About</Link>
             <Link href="/contact" className="hover:text-navy">Contact</Link>
+            <Link href="/faq" className="hover:text-navy">FAQ</Link>
             <Link href="/privacy" className="hover:text-navy">Privacy</Link>
             <Link href="/terms" className="hover:text-navy">Terms</Link>
             <span>{site.region}, {site.state}</span>
