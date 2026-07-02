@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { site, pricingTiers, trustBadges } from "@/lib/site";
+import { site, pricingTiers } from "@/lib/site";
 import { services } from "@/lib/services";
 import { cities } from "@/lib/cities";
 import { reviews } from "@/lib/reviews";
-import { QuoteButton, CtaBand, SectionHeading, GoogleRatingBadge } from "@/components/ui";
+import { CtaBand, SectionHeading } from "@/components/ui";
 import WaveDivider from "@/components/WaveDivider";
 import { ServiceIcon } from "@/components/ServiceIcons";
+import Hero from "@/components/Hero";
 
 const jobPhotos = [
   {
@@ -50,85 +51,7 @@ export default function Home() {
   const featured = services.slice(0, 6);
   return (
     <>
-      {/* HERO — navy, left-aligned, asymmetric */}
-      <section className="relative overflow-hidden bg-navy">
-        {/* Background photo — landscape job shot, with heavier overlay on mobile for readability */}
-        <div aria-hidden="true" className="absolute inset-0">
-          <Image
-            src="/images/yard-debris-hampton-roads.webp"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          {/* Navy overlay — flat ~90% on mobile, asymmetric gradient on desktop (darker left, lighter right) */}
-          <div className="absolute inset-0 bg-navy/90 md:bg-gradient-to-r md:from-navy/95 md:via-navy/88 md:to-navy/75" />
-          <div className="absolute inset-0 bg-navy/10" />
-        </div>
-        <div
-          aria-hidden="true"
-          className="absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-sky/15 blur-3xl"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute -bottom-24 -left-16 h-[300px] w-[300px] rounded-full bg-sky-deep/10 blur-3xl"
-        />
-        <div className="relative z-10 mx-auto grid max-w-7xl gap-8 px-4 pt-20 pb-28 sm:pt-28 lg:grid-cols-12 lg:pb-32">
-          <div className="lg:col-span-8">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sky-light">
-              <span className="h-1.5 w-1.5 rounded-full bg-sky-deep" />
-              Hampton Roads&apos; local crew
-            </p>
-            <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Your Mess Is
-              <br />
-              <span className="text-sky">Our Mission.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-lg text-sky-light/90">
-              Friendly, local crew handling the heavy lifting, loading, and hauling
-              across {site.region}, {site.state}. Fair, volume-based pricing — you only
-              pay for what we haul.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <QuoteButton />
-              <a
-                href={site.phoneHref}
-                className="inline-flex items-center justify-center rounded-full border-2 border-sky-light px-6 py-3 font-semibold text-white transition hover:bg-sky-light hover:text-navy"
-              >
-                Call {site.phone}
-              </a>
-            </div>
-            <div className="mt-6">
-              <GoogleRatingBadge tone="dark" />
-            </div>
-            <div className="mt-10 flex flex-wrap gap-2">
-              {trustBadges.map((b) => (
-                <span
-                  key={b}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-sky/30 bg-sky/10 px-3 py-1 text-xs font-semibold text-sky-light"
-                >
-                  <span className="h-1 w-1 rounded-full bg-sky-deep" /> {b}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="hidden lg:col-span-4 lg:block">
-            <div className="relative h-full">
-              <div className="absolute right-0 top-6 rotate-[3deg] rounded-2xl border border-sky/20 bg-navy-light/50 p-5 backdrop-blur">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">From</p>
-                <p className="mt-1 text-4xl font-extrabold text-white">$120</p>
-                <p className="mt-1 text-sm text-sky-light/90">single-item pickups</p>
-              </div>
-              <div className="absolute bottom-12 right-12 -rotate-[2deg] rounded-2xl border border-sky/20 bg-sky/10 p-5 backdrop-blur">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-deep">Same-day</p>
-                <p className="mt-1 text-lg font-bold text-white">service<br />often available</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <WaveDivider fill="#fdfbf7" />
-      </section>
+      <Hero />
 
       {/* WHAT WE REMOVE */}
       <section className="bg-sand">
